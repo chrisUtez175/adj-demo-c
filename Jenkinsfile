@@ -6,7 +6,7 @@ pipeline{
         stage('Para todos los servicios'){
             steps{
                 sh'''
-                    docker compose -p ADJ-DEMO down || true
+                    docker compose -p adj-demo down || true
                 '''
             }
         }
@@ -16,7 +16,7 @@ pipeline{
         stage('Borrando imagenes antiguas'){
             steps{
                 sh'''
-                    IMAGES=$(docker images --filter "label=com.docker.compose.project=ADJ-DEMO" -q)
+                    IMAGES=$(docker images --filter "label=com.docker.compose.project=adj-demo" -q)
                     if[ -n '$IMAGES']; then
                         docker images rmi $IMAGES
                     else
