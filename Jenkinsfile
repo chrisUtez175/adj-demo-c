@@ -53,7 +53,7 @@ pipeline{
             echo 'Error al ejecutar la pipeline'
         }
         
-        alwalays{
+        always{
             echo 'Finalizo la ejecucion de la pipeline'
         }
     }
