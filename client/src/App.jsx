@@ -1,6 +1,5 @@
 import TestController from "./modules/test/test.controller"
 
-TestController
 
 function App() {
 
@@ -22,7 +21,7 @@ function App() {
       <div className="container mt-5">
         <h2>Inicio</h2>
         <hr />
-        <button className="btn btn-success" onClick={TestController}>Llamar a mi API</button>
+        <button className="btn btn-success" onClick={()=>TestController.callToApi()}>Llamar a mi API</button>
       </div>
     </>
   )
