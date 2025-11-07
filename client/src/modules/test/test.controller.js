@@ -14,7 +14,7 @@ TestController.callToApi = async () => {
         .then(result=>{
             console.log('API Response:', result);
         })
-        .catch(console.log(error));
+        .catch(console.log);
 }
 
 export default TestController;
